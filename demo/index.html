@@ -17,18 +17,11 @@
     <script src="http://bilibili.github.io/flv.js/dist/flv.js" type="javascript"></script>
     
     <script>
-        function flv_load() {
+        setTimeout(function (){
             //var url = 'http://play.dtpcshow.com/live/showcase01.flv'
             var url = 'https://cn-jsnt-dx-live-05.bilivideo.com/live-bvc/396597/live_44901307_3563245_1500.flv?cdn=cn-gotcha01&expires=1579252941&len=0&oi=22048612&pt=web&qn=150&trid=7ffddbc2048840b4bbf8ef2d1cbc9960&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=5a34968952b2696eafbbc415c87695f3&ptype=0&platform=web&pSession=kd22Tysi-jyat-4TCB-WHBb-AeHzeeftJXb9'
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
-            xhr.onload = function (e) {
-                var mediaDataSource = JSON.parse(xhr.response);
-                flv_load_mds(mediaDataSource);
-            }
-            xhr.send();
-        }
+            flv_load_mds(mediaDataSource);
+        }, 2000)
 
         function flv_load_mds(mediaDataSource) {
             if (typeof player !== "undefined") {
