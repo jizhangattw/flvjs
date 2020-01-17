@@ -24,6 +24,7 @@
         }, 2000)
 
         function flv_load_mds(mediaDataSource) {
+            var element = document.getElementsByName('videoElement')[0];
             if (typeof player !== "undefined") {
                 if (player != null) {
                     player.unload();
